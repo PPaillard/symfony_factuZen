@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}} Liste de clients{% endblock %}
+
+{% block body %}
+<section class="container">
+<h1>Liste de clients</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Company name</th>
+      <th scope="col">Contact name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for client in clients %}
+    <tr>
+      <td>{{client.companyName}}</td>
+      <td>{{client.contactName}}</td>
+      <td>{{client.email}}</td>
+      <td>{{client.phone}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</section>
+{% endblock %}

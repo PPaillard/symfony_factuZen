@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}} {{client.companyName}}{% endblock %}
+
+{% block body %}
+<section class="container">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{client.companyName}}</h5>
+    <h6 class="card-title">{{client.contactName}}</h6>
+    <a href="tel:{{client.phone}}">{{client.phone}}</a>
+    <a href="mailto:{{client.email}}">{{client.email}}</a>
+  </div>
+</div>
+</section>
+{% endblock %}
