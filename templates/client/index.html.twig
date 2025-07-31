@@ -12,6 +12,7 @@
       <th scope="col">Contact name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,7 @@
       <td>{{client.contactName}}</td>
       <td>{{client.email}}</td>
       <td>{{client.phone}}</td>
+      <td><a href={{ path('client_show', {"id":client.id})}}>Voir</a></td>
     </tr>
     {% endfor %}
   </tbody>
