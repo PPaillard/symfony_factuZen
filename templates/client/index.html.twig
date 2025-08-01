@@ -22,7 +22,10 @@
       <td>{{client.contactName}}</td>
       <td>{{client.email}}</td>
       <td>{{client.phone}}</td>
-      <td><a href={{ path('client_show', {"id":client.id})}}>Voir</a></td>
+      <td>
+      <a href={{ path('client_show', {"id":client.id})}}>Voir</a>
+      <a href={{ path('client_invoices', {"id":client.id})}}>Factures</a>
+      </td>
     </tr>
     {% endfor %}
   </tbody>
