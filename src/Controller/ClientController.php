@@ -33,10 +33,8 @@ final class ClientController extends AbstractController
     #[Route('/clients/{id}/invoices', name: "client_invoices")]
     public function showInvoices(Client $client): Response
     {
-        $invoices = $client->getInvoices();
         return $this->render("client/invoices.html.twig", [
-            "client" => $client,
-            "invoices" => $invoices
+            "client" => $client
         ]);
     }
 
